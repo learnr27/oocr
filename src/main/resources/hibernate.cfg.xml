@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+    "-//Hibernate/Hibernate Configuration DTD//EN"
+    "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+  <session-factory>
+    <property name="connection.url">jdbc:mysql://cd-cdb-f48r7p1e.sql.tencentcdb.com:63783/dbfor</property>
+    <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+    <mapping class="VehicleLicenseEntity"/>
+    <mapping class="com.bannad927.oocr.entity.IdCardEntity"/>
+    <mapping class="com.bannad927.oocr.entity.BankCardEntity"/>
+    <mapping class="com.bannad927.oocr.entity.DrivingLicenseEntity"/>
+    <mapping class="com.bannad927.oocr.entity.BusinessLicenseEntity"/>
+    <!-- <property name="connection.username"/> -->
+    <!-- <property name="connection.password"/> -->
+
+    <!-- DB schema will be updated if needed -->
+    <!-- <property name="hbm2ddl.auto">update</property> -->
+  </session-factory>
+</hibernate-configuration>

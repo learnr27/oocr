@@ -1,0 +1,37 @@
+server:
+  servlet:
+    context-path: /oocr
+  port: 8008
+spring:
+  thymeleaf:
+    cache: false
+  servlet:
+    multipart:
+      max-file-size: 5MB
+      max-request-size: 5MB
+  resources:
+    static-locations: classpath:/templates/, classpath:/META-INF/resources/, classpath:/resources/, classpath:/static/, classpath:/public/,file:${receivePath}
+  datasource:
+      driver-class-name: com.mysql.jdbc.Driver
+      url: jdbc:mysql://127.0.0.1:3306/oocr
+      username: root
+      password: oocr_123
+      type: com.alibaba.druid.pool.DruidDataSource
+      maxActive: 20
+      initialSize: 1
+      maxWait: 60000
+      poolPreparedStatements: true
+      maxPoolPreparedStatementPerConnectionSize: 20
+      minIdle: 1
+      timeBetweenEvictionRunsMillis: 60000
+      minEvictableIdleTimeMillis: 300000
+      validationQuery: select 1 from dual
+      testWhileIdle: true
+      testOnBorrow: false
+      testOnReturn: false
+      filters: stat, wall, log4j
+      connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+      useGlobalDataSourceStat: true
+
+projectPath: /ext/app/oocr/
+receivePath: ${projectPath}images/

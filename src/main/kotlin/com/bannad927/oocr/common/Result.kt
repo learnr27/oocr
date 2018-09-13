@@ -7,7 +7,7 @@ import lombok.Setter
 /**
  * Created by: 程彬彬
  * Date: 2018/8/24
- * Describe: 
+ * Describe:
  */
 @Data
 @Getter
